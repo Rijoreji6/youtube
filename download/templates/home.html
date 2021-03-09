@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <style type="text/css" media="all">
+    .container{
+        margin: auto;
+        width:900px;
+        height:450px;
+        background-color:black;
+        padding-left: 20px;
+        padding-top: 20px;
+        border-radius: 40px;
+        
+    }
+    .container p{
+        color:rgb(246, 248, 244);
+        font-weight:bold;
+        font-family: cursive;
+        text-align: center;
+        font-size:25px;
+    }
+    .container form{
+        height:320px;
+        width:870px;
+        background-color: rgb(178, 236, 236);
+        border: 6px solid rgb(149, 108, 108);
+        
+    }
+    .container form .form-control1{
+        height:20px;
+        width:97%;
+        border:1px;
+        border-radius: 5px;
+        margin:5px 10px 10px 10px;
+
+    }
+    .container form h1{
+        font-size:medium;
+        margin:10px;
+    }
+    .container form .form-control2{
+        height:20px;
+        width:10%;
+        border:1px;
+        border-radius: 5px;
+        margin:5px 10px 10px 10px;
+    }
+    .container form .btn{
+            margin-left:30%;
+            transform:transalateX(-50%);
+            width: 1;
+            width:240px;
+            height:43px;
+            background:#27a327;
+            cursor: pointer;
+            font-size:16px;
+            text-transform: uppercase;
+            color:white;
+            border-radius:10px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <p>YouTube</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="formgroup">
+                <label for="link" ><h1>Enter the Link</h1></label>
+                <input type="text" id="link" name="link" class="form-control1"/>
+            <label for id="qua"><h1>Select the Quality</h1></label>
+            <select id="qua" name="qua" class="form-control2">
+                <option value="144p">Low</option>
+                <option value="360p">Medium</option>
+                <option value="720p">High</option>
+            </select>
+            </div>
+            <input type="submit" value="ENTER" class="btn"/>
+        </form>
+
+    </div>
+</body>
+</html>
